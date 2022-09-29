@@ -1,0 +1,237 @@
+.about {
+    height: 100vh;
+    display: flex;
+    
+  }
+  .aboutCanvasContainer {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); 
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+  }
+  
+  .aboutContainer {
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 70vh;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    padding: 2vmax;
+    box-sizing: border-box;
+  }
+  
+  .aboutContainer > p {
+    text-align: right;
+    line-height: 40px;
+    color: rgba(15, 15, 15, 0.822);
+    font-size: 1vmax;
+    width: 42%;
+  }
+  
+  .aboutContainer2 {
+    width: 62%;
+    min-height: 80vh;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 2vmax;
+    display: flex;
+    transform: translateX(-100vw) translateY(-10%) rotateZ(-360deg);
+    animation: aboutAnimation 1s ease-in forwards;
+  }
+  .aboutContainer2 > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+    color: rgba(17, 17, 17, 0.712);
+    box-sizing: border-box;
+  }
+  .aboutContainer2 > div:first-child {
+    align-items: center;
+  }
+  
+  .aboutAvatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    transition: all 1s;
+  }
+  
+  .aboutAvatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+  }
+  
+  @keyframes aboutAnimation {
+    to {
+      transform: translateX(20%) translateY(-10%);
+    }
+  }
+  @keyframes aboutAnimationPhone {
+    to {
+      transform: translateX(0%) translateY(0%);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .about {
+      align-items: flex-end;
+      padding-top: 100px;
+    }
+    .aboutContainer {
+      display: none;
+    }
+  
+    .aboutContainer2 {
+      width: 100%;
+      position: relative;
+      flex-direction: column;
+      animation: aboutAnimationPhone 1s ease-in forwards;
+    }
+  
+    .aboutContainer2 > div:last-child > p {
+      text-align: center !important;
+    }
+  
+    .aboutAvatar {
+      width: 100px;
+      height: 100px;
+      transform: translateY(-80%);
+    }
+  }
+
+  .skillsBox {
+    background-color: hsl(205, 100%, 75%);
+    padding: 0.5vmax;
+    margin-top: 9%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation: skillsBoxAnimationOn 1s linear forwards;
+  }
+
+  .skillsBox > h2 {
+    font-size: 1.5vmax;
+    color: hsl(220, 23%, 95%);
+    transition: all 0.5s;
+    text-decoration: underline;
+    margin: 10px;
+  }
+  
+  .skillsBox > svg {
+    font-size: 3vmax;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    margin: auto;
+    padding: 7px;
+    
+  }
+  .skillsBox > svg:hover {
+    transform: scale(1.5);
+  }
+
+  @keyframes skillsBoxAnimationOn {
+    from {
+      left: -300px;
+    }
+    to {
+      left: 2%;
+    }
+  }
+  
+  /*------------footer------------------*/
+  .footer {
+    background-color: hsl(35, 48%, 8%);
+    padding: 0.5vmax ;
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    
+  }
+  .footer > div > p {
+    font-size: 12px;
+    color: rgba(100, 100, 100, 20);
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer > div > p > img {
+    width: 3%;
+    margin-right: 10px;
+  }
+  
+  .footer > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 67%;
+  }
+
+
+  .socialFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 1%;
+  }
+  
+  .socialFooter > h6 {
+      border-right: 1px solid white;
+      color: white;
+      padding: 10px 0;
+
+  }
+
+  .socialFooter > h5 {
+    font-size: 0.75vmax;
+    color: white;
+    padding: 10px 0;
+
+}
+
+  .socialFooter > a {
+    font-size: 2.5vmax;
+    margin-left: 5px;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s;
+  }
+  .socialFooter > a:nth-child(2):hover {
+    color: rgba(10, 160, 80, 0.9);
+    transform: scale(1.2);
+  }
+  .socialFooter > a:nth-child(4):hover {
+    color: rgba(10, 80, 160, 0.9);
+    transform: scale(1.2);
+  }
+  .socialFooter > a:nth-child(5):hover {
+    color: rgba(305, 76, 200, 0.8);
+    transform: scale(1.2);
+  }
+  .socialFooter > a:nth-child(6):hover {
+    color: rgba(80, 80, 80, 20);
+    transform: scale(1.2);
+  }
+  .socialFooter > a:nth-child(7):hover {
+    color: rgba(40, 40, 200,0.8);
+    transform: scale(1.2);
+  }
+  
+  /*------------------------------------*/
+  

@@ -1,0 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/z_backend/config/config.env
+
+
+/z_frontend/node_modules
+/z_frontend/.pnp
+/z_frontend/.pnp.js
+
+# testing
+/z_frontend/coverage
+
+# production
+/z_frontend/build
+
+# misc
+/z_frontend/.DS_Store
+/z_frontend/.env.local
+/z_frontend/.env.development.local
+/z_frontend/.env.test.local
+/z_frontend/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
